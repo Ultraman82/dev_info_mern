@@ -80,6 +80,8 @@ router.post('/', [auth, [
     if (linkedin) profileFields.social.linkedin = linkedin;
     if (instagram) profileFields.social.instagram = instagram;
 
+    //to test url change to ssh
+
     try {
         let profile = await Profile.findOne({ user: req.user.id });
         if (profile) {
